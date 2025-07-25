@@ -1,17 +1,20 @@
 body {
-    background-color: #F5F8FF;
     padding: 0 16px;
     box-sizing: border-box;
     overflow-x: hidden;
-    
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  @media (min-width: 1441px) {
+    body {
+      padding: 0; /* remove padding for wide screens */
+    }
+  }
 main{
     max-width: 1440px;
     margin: 0 auto;
@@ -256,12 +259,12 @@ main{
 }
 
 .deal-card-1 {
-    background-image: url('/assets/deal-ana.png');
+    background-image: url('assets/deal-ana.png');
     
 }
 
 .deal-card-2 {
-    background-image: url('/assets/deal-bloom.png');
+    background-image: url('assets/deal-bloom.png');
     
 }
 
@@ -277,7 +280,7 @@ main{
   }
 
 .deal-card-large {
-    background-image: url('/assets/deal-zabo.png');
+    background-image: url('assets/deal-zabo.png');
     height: 320px;
     border-radius: 10px;
     overflow: hidden;
