@@ -249,55 +249,47 @@ main{
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  width: 100%;
 }
 
-.deal-card-large {
-  height: 320px;
-}
-.deal-card {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 150px;
-    width: 100%; /* Add width */
-  }
+
+
   
+.deal-card {
+    height: 150px;
+  }
   .deal-card-large {
     height: 320px;
   }
-  
   .deal-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Send image to background */
   }
-  
+
   .deal-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Full width */
+    width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5) 100%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.6) 100%);
     z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Center everything */
-    text-align: center;
-    color: white;
+    align-items: center;
     padding: 20px;
+    color: white;
+    text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
+  
   
   .shop-btn {
     margin-top: 10px;
@@ -323,15 +315,30 @@ main{
 
 /* Button styling */
 .shop-btn {
-  background-color: #E95A08;
-  border: none;
-  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
   color: white;
-  font-weight: bold;
-  border-radius: 5px;
+  padding: 8px 20px;
+  border-radius: 25px;
   cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  z-index: 2;
 }
-
+.deal-discount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .deal-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+.shop-btn:hover {
+  background-color: white;
+  color: #333;
+}
 
 .deal-text {
     text-align: center;
