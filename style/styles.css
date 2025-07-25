@@ -267,14 +267,13 @@ main{
     border-radius: 10px;
     overflow: hidden;
     height: 150px;
-    width: 100%;
+    width: 100%; /* Add width */
   }
   
   .deal-card-large {
     height: 320px;
   }
   
-  /* Image inside the card */
   .deal-image {
     width: 100%;
     height: 100%;
@@ -282,35 +281,33 @@ main{
     display: block;
   }
   
-  /* Overlay content */
   .deal-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
-    width: 100%;
+    width: 100%; /* Full width */
     height: 100%;
-    background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0,0,0,0.5) 100%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    color: white;
+    align-items: center; /* Center everything */
     text-align: center;
+    color: white;
     padding: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   }
   
-  /* Button styling */
   .shop-btn {
-    background-color: #E95A08;
+    margin-top: 10px;
+    background-color: #e95a08;
     border: none;
     padding: 8px 16px;
     color: white;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
   }
   
   .shop-btn:hover {
