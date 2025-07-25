@@ -78,16 +78,16 @@ main{
     text-align: center;
   }
   
-  .btn-primary{
+  .btn-primary {
     background-color: #E95A08;
     color: #FFFFFF;
-    padding: 1.25rem 4.5rem;
+    padding: 1rem 7.8rem; /* Reduced padding */
     font-size: 1rem;
     cursor: pointer;
     font-weight: bold;
     border: none;
+    white-space: nowrap; /* Prevent line break */
 }
-
 .plants-card {
 
     text-align: center;
@@ -553,3 +553,8 @@ main{
     color: #333;
     margin-bottom: 20px;
 }
+
+.nav-link i {
+    margin-right: 0.5rem; /* or margin-left if icon is after text */
+  }
+  
