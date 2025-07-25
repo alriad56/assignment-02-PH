@@ -260,12 +260,12 @@ main{
 }
 
 .deal-card-1 {
-    background-image: url('assets/deal-ana.png');
+    background-image: url('/assets/deal-ana.png');
     
 }
 
 .deal-card-2 {
-    background-image: url('assets/deal-bloom.png');
+    background-image: url('/assets/deal-bloom.png');
     
 }
 
@@ -281,7 +281,7 @@ main{
   }
 
 .deal-card-large {
-    background-image: url('assets/deal-zabo.png');
+    background-image: url('/assets/deal-zabo.png');
     height: 320px;
     border-radius: 10px;
     overflow: hidden;
@@ -329,7 +329,7 @@ main{
 
 /* Newsletter Section */
 .newsletter-section {
-    background-image: url('assets/news-letter-bg.png');
+    background-image: url('/assets/news-letter-bg.png');
     background-size: cover;
     background-position: center;
     padding: 80px 40px;
