@@ -329,7 +329,7 @@ main{
 
 /* Newsletter Section */
 .newsletter-section {
-    background-image: url('/assets/news-letter-bg.png');
+    background-image: url('./assets/news-letter-bg.png');
     background-size: cover;
     background-position: center;
     padding: 80px 40px;
