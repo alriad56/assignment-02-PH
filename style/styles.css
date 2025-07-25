@@ -244,55 +244,66 @@ main{
     gap: 22px;
 }
 
-.deal-card {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+.deal-card,
+.deal-card-large {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
-
-.deal-card-1 {
-    background-image: url('assets/deal-ana.png');
-    
-}
-
-.deal-card-2 {
-    background-image: url('/assets/deal-bloom.png');
-    
-}
-
- .deal-card::after, .deal-card-2::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0,0,0,0.5) 100%);
-    pointer-events: none;
-  }
 
 .deal-card-large {
-    background-image: url('/assets/deal-zabo.png');
-    height: 320px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  height: 320px;
+}
+
+/* Add backgrounds */
+.deal-card-1 {
+  background-image: url('/assets/deal-ana.png');
+}
+.deal-card-2 {
+  background-image: url('/assets/deal-bloom.png');
+}
+.deal-card-large {
+  background-image: url('/assets/deal-zabo.png');
+}
+
+/* Overlay */
+.deal-card::after,
+.deal-card-2::after,
+.deal-card-large::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0,0,0,0.5) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Text container */
+.deal-text {
+  z-index: 2;
+  text-align: center;
+}
+
+/* Button styling */
+.shop-btn {
+  background-color: #E95A08;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 
@@ -329,46 +340,63 @@ main{
 
 /* Newsletter Section */
 .newsletter-section {
-    background-image: url('./assets/news-letter-bg.png');
-    background-size: cover;
-    background-position: center;
     padding: 80px 40px;
     text-align: center;
     color: white;
     position: relative;
-}
-
-
-.newsletter-content {
+  }
+  
+  .newsletter-content {
     position: relative;
-    z-index: 1;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
-}
-
-.newsletter-title {
+  }
+  
+  .newsletter-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .newsletter-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional overlay darkness */
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .newsletter-title {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.newsletter-form {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .newsletter-form {
     display: flex;
-    gap: 0;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.newsletter-input {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .newsletter-input {
     flex: 1;
     padding: 15px 20px;
     border: none;
     border-radius: 5px 0 0 5px;
     font-size: 1rem;
     outline: none;
-}
-
-.newsletter-btn {
+  }
+  
+  .newsletter-btn {
     background-color: #ff6b35;
     color: white;
     border: none;
@@ -378,11 +406,12 @@ main{
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
-}
-
-.newsletter-btn:hover {
+  }
+  
+  .newsletter-btn:hover {
     background-color: #e55a2b;
-}
+  }
+  
 
 /* Footer */
 .footer {
